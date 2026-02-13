@@ -3,28 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Import Question</title>
+    <title>For Kalyani ❤️</title>
     <link rel="stylesheet" href="./public/css/style.css" />
+
+    <style>
+      /* Simple clean intro styling */
+      #intro-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      #intro-screen h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      #intro-screen button {
+        padding: 12px 25px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        transition: 0.3s ease;
+      }
+
+      #intro-screen button:hover {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
+
   <body>
-    <div class="container">
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+      <h1>Hi Kalyani &lt;3</h1>
+      <button onclick="startValentine()">Click to Proceed</button>
+    </div>
+
+    <!-- Main Valentine Content -->
+    <div class="container" id="main-content" style="display: none;">
       <div class="banner-gif">
         <img id="banner" src="./public/images/mid.gif" alt="banner" />
       </div>
+
       <h1 id="question-heading">Will you be my valentine?</h1>
+
       <div class="buttons">
         <button id="yes-button"><p>Yes</p></button>
         <button id="no-button"><p>No</p></button>
       </div>
+
       <div class="message">
         <h2 id="success-message">Yepppie, see you sooonnn :3</h2>
-        
-        <h6>Creator: <a class="creator" href="https://github.com/Aayush-683">Aayush683 ;)</a></h6>
+        <h6>
+          Creator:
+          <a class="creator" href="https://github.com/Aayush-683">
+            Aayush683 ;)
+          </a>
+        </h6>
       </div>
-
-     
-  
     </div>
+
     <script src="./public/js/script.js"></script>
+
+    <script>
+      function startValentine() {
+        document.getElementById("intro-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }
+    </script>
   </body>
 </html>
